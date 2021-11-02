@@ -17,3 +17,13 @@ def News():
   entertainment_news = get_sources ('entertainment')
   
   return render_template('sources.html',general =general_news,sports= sports_news,entertainment=entertainment_news)
+
+@main.route('/Articles/<id>')
+def Articles(id):
+    
+    article = get_source(id)
+    # print(len(article))
+    
+
+  
+    return render_template('articles.html', article =article)
