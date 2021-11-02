@@ -33,3 +33,22 @@ def get_sources(category):
       
       
   return sources_results  
+
+def process_results(sources_list):
+  news_results = []
+  for source_item in sources_list:
+    id = source_item.get('id')
+    name = source_item.get ('name')
+    description = source_item.get('description')
+    url =source_item.get('url')
+    category = source_item.get('category')
+    language = source_item.get('language')
+    country = source_item.get('country')
+    
+    sources_object = Sources(id,name, description,url,category,language,country)
+    news_results.append(sources_object)
+    
+  
+    
+  return news_results
+
