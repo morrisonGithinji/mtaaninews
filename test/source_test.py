@@ -1,14 +1,14 @@
 import unittest
-from app.models import Articles
+from app.models import Sources
 
-class ArticlesTest(unittest.TestCase):
+class SourcesTest(unittest.TestCase):
   
   def setUp(self):
-    self.new_article = Articles('bbc','brad','what to do','an article on what to do','cnn.com/articles','image.article','2nd march')
+    '''
+    Tests behaviour of source class
+    '''
+    
+    self.new_source = Sources('cnn','cnn_news','For the best news in town','cnn.com','general','english','us')
     
   def test_instance(self):
-    self.assertTrue(isinstance(self.new_article,Articles))  
-    
-    
-if __name__ == "__main__":
-      unittest.main()  
+    self.assertTrue(isinstance(self.new_source,Sources))  
